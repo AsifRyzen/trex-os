@@ -1,76 +1,247 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TReX OS Cretaceous</title>
+<title>TReX OS – Cretaceous Edition</title>
 
 <style>
-body {
-  margin:0;
-  background:#0f0f0f;
-  color:white;
-  font-family:Segoe UI, sans-serif;
-  text-align:center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: white;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HERO SECTION */
 
 .hero {
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 }
 
-h1 {
-  font-size:64px;
-  color:#ff7a00;
+.hero h1 {
+  font-size: 64px;
+  color: #ff7a00;
+  margin-bottom: 20px;
 }
 
-p {
-  font-size:22px;
-  max-width:700px;
+.hero p {
+  font-size: 22px;
+  max-width: 700px;
+  margin-bottom: 40px;
 }
 
 .button {
-  margin-top:30px;
-  padding:15px 30px;
-  background:#ff7a00;
-  color:black;
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:8px;
+  padding: 16px 32px;
+  background: #ff7a00;
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s ease;
 }
 
+.button:hover {
+  background: #ffa042;
+}
+
+/* SECTIONS */
+
 .section {
-  padding:80px 20px;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  color: #ff7a00;
+  margin-bottom: 60px;
+  font-size: 36px;
+}
+
+/* FEATURES GRID */
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.feature-box {
+  width: 280px;
+  padding: 25px;
+  background: #1a1a1a;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.feature-box:hover {
+  background: #222;
+  transform: translateY(-5px);
+}
+
+.feature-box h3 {
+  margin-bottom: 15px;
+  color: #ff7a00;
+}
+
+/* SCREENSHOT PLACEHOLDERS */
+
+.screenshots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.screenshot-box {
+  width: 320px;
+  height: 200px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+}
+
+/* DOWNLOAD SECTION */
+
+.download-box {
+  background: #1a1a1a;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.download-box p {
+  margin-bottom: 15px;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 40px 20px;
+  background: #111;
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+  margin-top: 100px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .feature-box {
+    width: 100%;
+  }
+
+  .screenshot-box {
+    width: 100%;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- HERO -->
+
 <section class="hero">
   <h1>TReX OS</h1>
-  <p>Cretaceous Edition – A clean, Unity-powered Linux distribution focused on elegance and control.</p>
-  <a href="#" class="button">Download ISO (Coming Soon)</a>
+  <p>
+    Cretaceous Edition – A clean, Unity-powered Linux distribution 
+    focused on elegance, minimalism, and full control.
+  </p>
+  <a href="#download" class="button">Download ISO (Coming Soon)</a>
 </section>
 
-<section class="section">
-  <h2 style="color:#ff7a00;">Features</h2>
-  <p>Unity 7 Desktop • Minimal Base • Ubuntu 24.04 LTS • Custom Branding</p>
-</section>
+<!-- FEATURES -->
 
 <section class="section">
-  <h2 style="color:#ff7a00;">Screenshots</h2>
-  <p>Screenshots coming soon.</p>
+  <h2>Features</h2>
+  <div class="features">
+    <div class="feature-box">
+      <h3>Unity 7 Desktop</h3>
+      <p>Modern Unity experience with global menu and classic workflow.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Ubuntu 24.04 LTS Base</h3>
+      <p>Stable long-term support foundation with latest security updates.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Minimal & Clean</h3>
+      <p>No unnecessary apps. Focused, lightweight and efficient design.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Custom Branding</h3>
+      <p>Unique TReX OS theming, wallpapers and identity.</p>
+    </div>
+  </div>
 </section>
 
+<!-- SCREENSHOTS -->
+
 <section class="section">
-  <h2 style="color:#ff7a00;">Download</h2>
-  <p>ISO Release: Coming Soon</p>
-  <p>SHA256: Coming Soon</p>
+  <h2>Screenshots</h2>
+  <div class="screenshots">
+    <div class="screenshot-box">Screenshot 1</div>
+    <div class="screenshot-box">Screenshot 2</div>
+    <div class="screenshot-box">Screenshot 3</div>
+  </div>
 </section>
+
+<!-- DOWNLOAD -->
+
+<section id="download" class="section">
+  <h2>Download</h2>
+  <div class="download-box">
+    <p><strong>Current Release:</strong> TReX OS Cretaceous (Coming Soon)</p>
+    <p><strong>Architecture:</strong> x86_64</p>
+    <p><strong>SHA256 Checksum:</strong> Coming Soon</p>
+    <br>
+    <a href="#" class="button">Download ISO</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  © 2026 TReX OS — Built by Asif Hussain  
+  <br>
+  <a href="https://github.com/AsifRyzen/trex-os" style="color:#ff7a00;">
+    View on GitHub
+  </a>
+</footer>
+
 </body>
-
 </html>
